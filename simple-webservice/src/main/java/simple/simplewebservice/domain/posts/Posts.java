@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 /**
  * Entity(DB 테이블과 mapping할 class) - 카멜 네이밍 -> 언더스코어 네이밍
  * Entity class는 절대 Setter 만들지 않는다. -> Builder로 생성후 public 메소드 구현으로 수정
- * id, table, content, author
+ * id, title, content, author
  */
 @Getter
 @NoArgsConstructor // 기본 생성자 자동
@@ -20,7 +20,7 @@ public class Posts {
     private Long id;
 
     @Column(length = 500, nullable = false)
-    private String table;
+    private String title;
 
     @Column(columnDefinition = "TEXT",  nullable = false)
     private String content;
@@ -28,9 +28,9 @@ public class Posts {
     private String author;
 
     @Builder
-    public Posts(Long id, String table, String content, String author) {
+    public Posts(Long id, String title, String content, String author) {
         this.id = id;
-        this.table = table;
+        this.title = title;
         this.content = content;
         this.author = author;
     }
