@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import simple.simplewebservice.BaseTimeEntity;
 
 /**
  * Entity(DB 테이블과 mapping할 class) - 카멜 네이밍 -> 언더스코어 네이밍
@@ -13,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor // 기본 생성자 자동
 @Entity
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     @Id // DB의 Pk값
     @GeneratedValue(strategy = GenerationType.IDENTITY) // PK 규칙 : AI
