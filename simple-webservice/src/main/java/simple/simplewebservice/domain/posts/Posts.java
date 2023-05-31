@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import simple.simplewebservice.BaseTimeEntity;
+import simple.simplewebservice.domain.BaseTimeEntity;
 
 /**
  * Entity(DB 테이블과 mapping할 class) - 카멜 네이밍 -> 언더스코어 네이밍
